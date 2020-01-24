@@ -1,0 +1,436 @@
+@font-face {
+  font-family: "Helvetica Neue Light";
+  src: url("../fonts/HelveticaNeue.eot");
+  src: url("../fonts/HelveticaNeue.eot") format("embedded-opentype"),
+       url("../fonts/HelveticaNeue.woff2") format("woff2"),
+       url("../fonts/HelveticaNeue.woff") format("woff"),
+       url("../fonts/HelveticaNeue.ttf") format("truetype"),
+       url("../fonts/HelveticaNeue.svg#ofont_ru_HelveticaNeue") format("svg");
+}
+
+
+/* ----- Placeholder -------------------- */
+input:-moz-placeholder,
+input::-moz-placeholder,
+textarea:-moz-placeholder,
+textarea::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+
+input:focus:-moz-placeholder,
+input:focus::-moz-placeholder,
+textarea:focus:-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  opacity: 0;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+::-webkit-contacts-auto-fill-button {
+  opacity: 0;
+}
+
+input[type="password"]::-webkit-contacts-auto-fill-button {
+  opacity: 1;
+}
+
+
+/* ----- Typography -------------------- */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  /* system-font-stack */
+  font-family: "Helvetica Neue Light", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  background-color: #ccc;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 25px;
+  font-weight: normal;
+  line-height: 1.3em;
+  color: #000;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+a {
+  color: #0070EB;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #0064d2;
+}
+
+
+/* ----- Controls ---------------- */
+.form-st-field input {
+  width: 100%;
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid #636363;
+  background-color: #fff;
+  border-radius: 0;
+  font-size: 16px;
+}
+
+.form-st-field input:focus {
+  border-color: #3e9ffd;
+  box-shadow: 0 0 0 1px #3e9ffd inset,
+              0px 2px 4px 0px rgba(0, 0, 0, 0.39) inset;
+  outline: none;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  background-color: rgba(62, 159, 253, 1);
+  border: none;
+}
+
+.btn:hover {
+  background-color: rgba(62, 159, 253, 0.9);
+}
+
+.btn_max {
+  width: 100%;
+}
+
+
+/* ----- Page structure ---------------- */
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.background-image-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 960px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ----- Login form ---------------- */
+.login-form-wrapper {
+  position: relative;
+  padding-top: 50px;
+  margin: 50px 0;
+}
+
+.form-login {
+  max-width: 360px;
+  padding: 75px 25px 25px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0px 3px 32px 0px rgba(0, 0, 0, 0.22);
+}
+
+.beautiful-logo {
+  position: absolute;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 0;
+  margin-left: -50px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.07);
+}
+
+.beautiful-logo__elem {
+  position: absolute;
+  z-index: 1;
+  width: 28px;
+  height: 28px;
+  left: 50%;
+  top: 50%;
+  border-radius: 5px;
+}
+
+.b-logo_orange {
+  margin-left: -21px;
+  margin-top: -35px;
+  background-color: rgba(248, 145, 29, 0.8);
+}
+
+.b-logo_flower {
+  margin-left: -7px;
+  margin-top: -21px;
+  background-color: rgba(209, 54, 156, 0.8);
+}
+
+.b-logo_sky {
+  margin-left: -21px;
+  margin-top: -7px;
+  background-color: rgba(62, 159, 253, 0.8);
+}
+
+.b-logo_grass {
+  margin-left: -7px;
+  margin-top: 7px;
+  background-color: rgba(78, 191, 73, 0.8);
+}
+
+.form-login__head {
+  margin-bottom: 30px;
+}
+
+.form-login__body {
+  margin-bottom: 30px;
+}
+
+.form-st-field {
+  margin-bottom: 20px;
+}
+
+.form-field-checkbox {
+  text-align: left;
+}
+
+.form-field-checkbox label {
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  line-height: 20px;
+}
+
+.form-field-checkbox input {
+  margin: 0 5px 0 0;
+}
+
+.form-field-checkbox span {
+  font-size: 13px;
+  color: #636363;
+}
+
+.form-login h1 {
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 0;
+}
+
+.form-login-sub-title {
+  font-size: 15px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Min width 375 pixels */
+@media only screen and (min-width: 375px) {
+  .form-login {
+    padding: 75px 40px 40px;
+  }
+  /* end media min width 375 pixels */
+}
+
+
+/* ----- Animations ---------------- */
+.login-form-wrapper {
+  visibility: hidden;
+}
+
+.login-form-wrapper.animated {
+  visibility: visible;
+}
+
+.background-image-container {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+  transition-delay: 0.9s;
+}
+
+.background-image-container.animated {
+  opacity: 1;
+}
+
+.background-image-container.fadeOut {
+  visibility: hidden;
+  animation-name: fadeOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+.animated .flipFromTop,
+.animated .flipFromBottom,
+.animated .beautiful-logo__elem {
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+.flipFromTop {
+  animation-name: flipFromTop;
+}
+
+.flipFromBottom {
+  animation-name: flipFromBottom;
+}
+
+.b-logo_orange {
+  animation-name: logoOrangeMove;
+}
+
+.b-logo_flower {
+  animation-name: logoFlowerMove;
+}
+
+.b-logo_sky {
+  animation-name: logoSkyMove;
+}
+
+.b-logo_grass {
+  animation-name: logoGrassMove;
+}
+
+@keyframes logoOrangeMove {
+  from {
+    transform: translate(-20px, -160px) scale(2);
+    width: 42px;
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0) scale(1);
+    opacity: 1;
+    width: 28px;
+  }
+}
+
+@keyframes logoFlowerMove {
+  from {
+    transform: translate(10px, -80px);
+    opacity: 0;
+    width: 36px;
+  }
+
+  to {
+    transform: translate(0);
+    opacity: 1;
+    width: 28px;
+  }
+}
+
+@keyframes logoSkyMove {
+  from {
+    transform: translate(-10px, -20px);
+    opacity: 0;
+    width: 36px;
+  }
+
+  to {
+    transform: translate(0);
+    opacity: 1;
+    width: 28px;
+  }
+}
+
+@keyframes logoGrassMove {
+  from {
+    transform: translate(40px, -300px) scale(2);
+    opacity: 0;
+    width: 42px;
+  }
+
+  to {
+    transform: translate(0) scale(1);
+    opacity: 1;
+    width: 28px;
+  }
+}
+
+@keyframes flipFromTop {
+  from {
+    transform: translateY(-10px) perspective(400px) rotate3d(1, 0, 0, 50deg) scale(1.5);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0) perspective(400px) scale(1);
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes flipFromBottom {
+  from {
+    transform: translateY(-15px) scale(0.8) perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  85% {
+    transform: scale(1.01) perspective(400px) rotate3d(1, 0, 0, 1deg);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
